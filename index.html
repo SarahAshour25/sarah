@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Business Card</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            lightPrimary: '#2A3256',
+            lightSecondary: '#F1F1F1',
+            lightAccent: '#8EBCEC',
+            lightHighlight: '#6DC0DC',
+            darkPrimary: '#000022',
+            darkText: '#B7B7B7',
+            darkAccent: '#586AA7',
+            darkHighlight: '#376294'
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    window.onload = () => lucide.createIcons();
+  </script>
+</head>
+
+<body
+  class="bg-lightSecondary dark:bg-darkPrimary text-gray-800 dark:text-darkText transition-colors duration-500">
+
+  <div class="fixed top-4 left-4 z-50 flex items-center gap-2">
+    <button onclick="document.documentElement.classList.toggle('dark')"
+      class="bg-lightAccent dark:bg-darkHighlight text-white p-2 rounded-full shadow-lg hover:scale-110 transition">
+      <i data-lucide="moon" class="w-5 h-5"></i>
+    </button>
+    <button onclick="showPage('main')"
+      class="bg-white dark:bg-darkAccent text-sm px-3 py-1 rounded shadow hover:scale-105">Home</button>
+    <button onclick="showPage('cv')"
+      class="bg-white dark:bg-darkAccent text-sm px-3 py-1 rounded shadow hover:scale-105">CV</button>
+  </div>
+
+  <div id="main" class="flex items-center justify-center min-h-screen px-4">
+    <div
+      class="bg-white dark:bg-darkAccent rounded-2xl shadow-xl p-8 max-w-md w-full text-center transition duration-500 hover:shadow-2xl hover:scale-105">
+
+      <h1 class="text-2xl font-bold text-lightPrimary dark:text-white mb-2">Sarah Ashour</h1>
+
+      <p class="text-gray-600 dark:text-darkText mb-4">Administrative Office Assistant | Educator | Healthcare &
+        Business Enthusiast</p>
+
+      <div class="flex justify-center space-x-4 mb-6">
+        <a href="#" class="hover:text-lightHighlight dark:hover:text-white transition"><i data-lucide="facebook"
+            class="w-5 h-5"></i></a>
+        <a href="#" class="hover:text-lightHighlight dark:hover:text-white transition"><i data-lucide="linkedin"
+            class="w-5 h-5"></i></a>
+        <a href="#" class="hover:text-lightHighlight dark:hover:text-white transition"><i data-lucide="twitter"
+            class="w-5 h-5"></i></a>
+        <a href="https://www.instagram.com/sarah.ashour25?utm_source=ig_web_button_share_sheet&igsh=ZnY0ZmUyb2ZueW1r" class="hover:text-lightHighlight dark:hover:text-white transition"><i data-lucide="instagram"
+            class="w-5 h-5"></i></a>
+      </div>
+
+      <div class="text-sm space-y-2 text-gray-700 dark:text-darkText">
+        <div class="flex items-center justify-center space-x-2">
+          <i data-lucide="phone" class="w-4 h-4 text-green-500"></i>
+          <a href="tel:+963 957 375 968" class="hover:text-lightAccent dark:hover:text-white transition">+963 957 375 968 </a>
+        </div>
+        <div class="flex items-center justify-center space-x-2">
+          <i data-lucide="mail" class="w-4 h-4 text-red-500"></i>
+          <a href="mailto:sarahashour82@email.com"
+            class="hover:text-lightAccent dark:hover:text-white transition">sarahashour82@email.com</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="cv" class="hidden min-h-screen px-4 py-20">
+    <div class="max-w-3xl mx-auto bg-white dark:bg-darkAccent rounded-2xl p-8 shadow-lg">
+      <h2 class="text-2xl font-bold mb-6 text-lightPrimary dark:text-white text-center">Curriculum Vitae</h2>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Objective</h3>
+        <p class="text-gray-700 dark:text-darkText">
+          Motivated and adaptable professional with strong communication skills, excellent time management, and proven
+          leadership abilities. Skilled in problem-solving, workflow optimization, and team collaboration. Passionate
+          about continuous learning, self-improvement, and exploring new opportunities for growth.
+        </p>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Education</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-darkText">
+          <li>2024 – Present | Business Administration – Al Sham Private University, Damascus, Syria</li>
+          <li>2019 – 2021 | Medical Institute – Pharmacy – Tishreen University, Latakia, Syria</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Teaching Experience</h3>
+        <p class="mb-2">2021–2023 | Private School, Damascus, Syria – Elementary School Teacher</p>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-darkText">
+          <li>Created engaging classroom activities, including group projects and hands-on exercises.</li>
+          <li>Developed quizzes, exams, and homework.</li>
+          <li>Adapted teaching strategies to meet diverse learning needs and support growth.</li>
+          <li>Maintained accurate student progress records and communicated with parents.</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Presentations & Invited Lectures</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-darkText">
+          <li>2023–2024 | Paper Presentation – “Impact of Digital Transformation on Healthcare Management,” Damascus
+            University</li>
+          <li>2023–2024 | Keynote Address – “Entrepreneurship Opportunities in the Medical Sector,” Syrian Private
+            University</li>
+          <li>2024 | Workshop – “Leadership Skills for Healthcare Managers,” HIBA, Damascus</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Professional Experience</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-darkText">
+          <li>2024–Present | Sama AlSham Group – Administrative Office Assistant</li>
+          <li>2023–2024 | Sama AlSham Group – Receptionist & HR Assistant</li>
+          <li>2022 | Al-Asad University Hospital – Pharmacist Assistant</li>
+          <li>2021–2022 | Beauty Center – Assistant</li>
+          <li>2020 | Dr. Mohamad Elewi – Social Media Manager</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Community Service</h3>
+        <p class="text-gray-700 dark:text-darkText">2016–Present | Humanitarian Aid Volunteer – “فريق كنا وسنبقى
+          التطوعي”, Damascus</p>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Languages</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-darkText">
+          <li>Arabic – Native</li>
+          <li>English – Intermediate Listener, Novice Speaker, Advanced Reading & Writing</li>
+          <li>French – A2</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-2">Computer Skills</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-darkText">
+          <li>Microsoft Office – Word, Excel, PowerPoint, Access</li>
+          <li>Applications – Al-Ameen Accounting Software, Google Workspace</li>
+          <li>ICDL Certified</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function showPage(page) {
+      document.getElementById('main').classList.add('hidden');
+      document.getElementById('cv').classList.add('hidden');
+      document.getElementById(page).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+
+</html>
